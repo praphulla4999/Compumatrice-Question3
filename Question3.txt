@@ -1,0 +1,14 @@
+Question No. 3) Suppose you have 2 tables as below
+
+Order table (Id(PK), OrderDate, OrderNumber, CustomerID, TotalAmount)
+Customer table(CustomerID(PK), FirstName, LastName, City, Country, Phone)
+Write a query to list all orders with customer information.
+
+Ans->
+SELECT        o.Id, o.OrderDate, o.OrderNumber, o.TotalAmount, o.CustomerID, c.FirstName, c.LastName, c.City, c.Country, c.Phone
+
+FROM            tbl_order AS o INNER JOIN
+
+                tbl_cust AS c 
+
+		ON o.CustomerID = c.CustomerID
